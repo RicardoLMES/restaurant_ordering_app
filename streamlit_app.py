@@ -16,8 +16,6 @@ st.write(
 title = st.text_input("Name on Smoothie:")
 st.write("The name of the Smoothie is ", title)
 
-
-session = get_active_session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 ingredients_list = st.multiselect('Choose up to 5 ingredients:', 
                                   my_dataframe, 
